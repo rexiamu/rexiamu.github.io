@@ -70,3 +70,28 @@ body .vuepress-plugin-demo-block__wrapper
   .highlight
     color: $accentColor
     font-weight: bold
+
+// 首页头像
+.blogger-wrapper .avatar{
+  padding: 50px;
+  box-sizing: border-box;
+
+  img{
+    transition: all 1s;
+
+    &:hover{
+      transform: scale(1.05);
+      filter: hue-rotate(-90deg);
+    }
+  }
+}
+
+// banner
+.banner {
+  display: none;
+}
+
+// main-wrapper
+.main-wrapper{
+  margin-top 4.6rem !important;
+}
