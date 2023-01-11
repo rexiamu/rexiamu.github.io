@@ -8,6 +8,7 @@ tags:
   - linux
   - tomcat
   - redis
+  - mysql
   - springboot
   - war
 ---
