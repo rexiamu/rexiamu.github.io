@@ -7,9 +7,9 @@ export default <VdoingThemeConfig>{
   nav: nav, // 上方导航栏配置, 如需修改请修改 nav.ts
   sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
   logo: "/assets/img/logo.png", // 导航栏Logo
-  repo: "rexiamu/rexiamu.github.io", // 导航栏右侧生成Github链接
+  // repo: "rexiamu/rexiamu.github.io", // 导航栏右侧生成Github链接
   searchMaxSuggestions: 10, // 搜索结果显示最大数
-  lastUpdated: "上次更新", // 更新的时间，及前缀文字   string | boolean (取值为git提交时间)
+  lastUpdated: false, // 更新的时间，及前缀文字   string | boolean (取值为git提交时间)
   docsDir: "docs", // 编辑的文件夹
   editLinks: true, // 启用编辑
   editLinkText: "编辑", // 编辑链接文字
@@ -52,7 +52,7 @@ export default <VdoingThemeConfig>{
   // 博主信息，显示在首页侧边栏
   blogger: {
     avatar:
-      "https://s2.loli.net/2023/01/10/XohRYi1JeOkcdEI.png",
+      "/assets/img/logo.png",
     name: "rexiamu",
     slogan: "永远年轻，永远热泪盈眶！",
   },
@@ -61,11 +61,11 @@ export default <VdoingThemeConfig>{
   social: {
     // iconfontCssFile: '//at.alicdn.com/t/font_1678482_u4nrnp8xp6g.css', // 可选，阿里图标库在线css文件地址，对于主题没有的图标可自由添加
     icons: [
-      {
-        iconClass: "icon-github",
-        title: "GitHub",
-        link: "https://github.com/rexiamu",
-      }
+      // {
+      //   iconClass: "icon-github",
+      //   title: "GitHub",
+      //   link: "https://github.com/rexiamu",
+      // }
     ],
   },
   footer: {
