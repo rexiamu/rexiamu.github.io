@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>前端部署到linux服务器 | rexiamu</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="rexiamu的博客">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/1.styles.1549aec9.css" as="style"><link rel="preload" href="/assets/js/app.fe08d954.js" as="script"><link rel="preload" href="/assets/js/11.95fedab7.js" as="script"><link rel="preload" href="/assets/js/20.db3c7372.js" as="script">
+    <link rel="stylesheet" href="/assets/css/1.styles.1549aec9.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open no-sidebar have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/logo.png" alt="rexiamu" class="logo"> <span class="site-name can-hide">rexiamu</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="/assets/img/logo.png"> <div class="blogger-info"><h3>rexiamu</h3> <span>永远年轻，永远热泪盈眶！</span></div></div> <!---->  <!----> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-06225672><div class="articleInfo" data-v-06225672><ul class="breadcrumbs" data-v-06225672><li data-v-06225672><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-06225672></a></li> <li data-v-06225672><a href="/categories/?category=posts" title="分类" data-v-06225672>posts</a></li></ul> <div class="info" data-v-06225672><div title="作者" class="author iconfont icon-touxiang" data-v-06225672><a href="https://rexiamu.github.io" target="_blank" title="作者" class="beLink" data-v-06225672>rexiamu</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-06225672><a href="javascript:;" data-v-06225672>2021-07-13</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-title">目录</div> <div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABKFJREFUSA3tVl1oFVcQnrMbrak3QUgkya1akpJYcrUtIqW1JvFBE9LiQ5v6JmJpolbMg32rVrhgoYK0QiMY6i9Y6EMaW5D+xFJaTYItIuK2Kr3+BJNwkxBj05sQY3b3nM6cs2dv9t7NT/vQJw/sndk5M/PNzJkzewGerP+pAmy+ON8lLzUJgA8ZYxYIYZmGYRnctDaWvJJAmTtfP1pvXsBCCPP8QFcCaRkZYACgDZFO4stNIcBCajEOlmmC9XpJ9bAGCaPaPmzPl32dvLSVu3BWCTQs0XQQ6g0DYgwLIoAZbBCdW/i+781o1VVlm/410mw4h06Y7bIPHNyWDyL4FHkX03Q8SrzNhZTZriieckWt7cL6MM85YcLpsi/7O9/iXFT6MswI0DmmpkSaJ0qLxFIm3+i1THHB3zmBH3PYx9CcykcLOeQVVa7QtdxTgQgEleX2AjHYfwA+2ddV77ruGoJUbhGDI09YSNXyMpUt5ylOzxgbUmtOp7NmbNt8v3arjTBfYELmLUV+M+nSawNNAUqpT3ClJWg5I3BLT+cGW/DXNGCa6tx1aakCGEigArTn4TDIPdrXXYKCZNrHLMCOEPvHBlLQ99s9eHB7EB6NTki73CVPQ2F5MSx/uRQixfmq7rK0wYD8w8E905bnPDfwoWs/rfv93NWN/ZfvwsLIU7A09gxECyISeGJkHAau98L97tuw7NXnoPyNF8FcYGLGKsOs0mN3OEyec9esGW/ZEl945dTP34wlR2FZVQWU1q0Cw8Tr7p+hgLLNL0FPxx/Q35mA8aEUrH6nCgwEl0tn7wUiZYJnNRh6DK4UH/k0lfyrsBKdPVv/AriGIQcEDQZ65LBAGe2Rzui9Ybjz7XUppz1/uKBbyVPGkN3ZAeC6hr0x7Nr38N5+EqkoOm17xpoqR9ohQF55ERSvr4Dkr3chNfC3DMzGJlNBElW8w9nsGQvhNGIzDkXzCg8cLK951xHsFBlTJspJNi3ZFIMF2AeDV3q8DNOB+YHi6QTrChDIWDBRi5U5f+ZMfJLu3ccrqxtdxk4SKH336LFxSmkqefwU5T8fhdSdQf9IVKD6aNiwI/hnmcAZ91isYMJIaCUCx9W098+LgruikeTqzqqxKPUwqJyCPJiyemVVZBOijDGjD38Os0jOiSPL1z3SPjXNANbiNPXAdzTfukjjuknNBbyz3nwgTd3AVFqUJ5hpHlq9MveLnWwttUfoygBmvVjuikxND3znrhsELnZk7k+OjIGxeNEkomyLVta0xxn+HZhjBc4YZ/AFjHjz9u3xRZl2BN4aq9nFwWh16IrQ1aHHEd3j1+4/dB9OtH4e29A2H1DyHQRmOSfQZ1Fy7MHBTGB6J/Djq6p3OxyO2cB+4Car7v/o3GXgfAkj23+x9ID1Teoamo/SXcbvSf2PX7Vc8DdCmE1vN9di+32P9/5YR3vLnhCVGUWBjEkr3yh4H8v9CzmsbdhzOKzsJKM90iFdaTMjRPhGVsakRvOaRidljo6H6G7j+ctrJpsP+4COhDIl0La2+FS4+5mlocBaXY5QnGZysIBYoeSsl5qQzrSj/cgNrfuEzlWBfwA+EjrZyWUvpAAAAABJRU5ErkJggg==">前端部署到linux服务器<!----></h1> <!----> <div class="theme-vdoing-content content__default"><h2 id="项目打包"><a href="#项目打包" class="header-anchor">#</a> 项目打包</h2> <ol><li>在当前项目目录下运行 <code>npm run build</code>  命令将项目打包，生成 <code>dist</code>  文件夹</li> <li>如果是第一次操作，需要在 linux 服务器的目录 <code>/usr/local/nginx/html/</code>  中新建放置该项目的文件夹</li></ol> <h2 id="配置nginx"><a href="#配置nginx" class="header-anchor">#</a> 配置 nginx</h2> <ol><li>打开 <code>/usr/local/nginx/conf/nginx.conf</code>  文件</li> <li>新增一个 <code>server</code> ，设置其端口号、域名、ssl 证书、文件路径、代理等</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>server {
+  listen       443 ssl; # 443 端口号    ssl 开启HTTPS
+  server_name  www.example.com; # 域名
+  ssl_certificate /usr/local/nginx/cert/www.example.com.pem;     # 证书文件
+  ssl_certificate_key /usr/local/nginx/cert/www.example.com.key; # 证书文件
+  charset utf-8;
+
+  location / {
+    root   /usr/local/nginx/html/projectName; # 文件路径
+    try_files $uri $uri/ /index.html;
+    index  index.html index.htm;
+  }
+
+  location /prod-api/ { # 代理地址
+    proxy_set_header Host $http_host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header REMOTE-HOST $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_pass https://localhost:8080/;  # 后端接口
+  }
+
+  error_page   500 502 503 504  /50x.html;
+  location = /50x.html {
+    root   html;
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><ul><li>在使用 ssl 证书的情况下，访问地址会以 <code>https</code>  开头，不使用则是已 <code>http</code>  开头</li> <li><code>https</code>  的默认端口为 <code>443</code> ，如果同时配置 <code>ssl证书</code> 和 <code>443</code>  端口，访问网址为 <code>https://www.example.com</code></li> <li><code>http</code>  的默认端口为 <code>80</code> ，如果没有配置 <code>ssl证书</code> 且设置 <code>80</code>  为端口，访问网址为 <code>http://www.example.com</code></li> <li>配置域名需要预先在域名所在平台进行域名解析：<a href="https://blog.csdn.net/can3981132/article/details/118051616" target="_blank" rel="noopener noreferrer">阿里云域名解析<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li>配置 ssl 证书需要先申请证书：<a href="https://blog.csdn.net/yunweifun/article/details/123409692" target="_blank" rel="noopener noreferrer">阿里云 ssl 证书申请<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <h2 id="启动服务"><a href="#启动服务" class="header-anchor">#</a> 启动服务</h2> <ul><li>nginx 还未运行的情况下，在 <code>/usr/local/nginx/sbin/</code>  目录运行 <code>./nginx</code>  命令</li> <li>如果配置文件 <code>/usr/local/nginx/conf/nginx.conf</code>  有修改，运行 <code>./nginx -s reload</code>  命令</li> <li>如果只是更新了项目文件，则不需要进行操作，nginx 会自动更新</li> <li>如果在浏览器中访问发现没有更新，需要刷新几次或者清除缓存</li></ul></div></div> <!----> <div class="page-edit"><!----> <div class="tags"><a href="/tags/?tag=linux" title="标签">#linux</a><a href="/tags/?tag=nginx" title="标签">#nginx</a><a href="/tags/?tag=vue" title="标签">#vue</a></div> <!----></div> <div class="page-nav-wapper"><!----> <!----></div></div> <!----></main></div> <div class="footer"><div class="icons"></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2021-2023
+    <span>
+      <a href='https://rexiamu.github.io' target='_blank'>Rexiamu</a> | <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/' rel='external nofollow' target='_blank'>CC BY-NC-SA 4.0</a>
+    </span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.fe08d954.js" defer></script><script src="/assets/js/11.95fedab7.js" defer></script><script src="/assets/js/20.db3c7372.js" defer></script>
+  </body>
+</html>
