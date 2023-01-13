@@ -23,13 +23,15 @@ tags:
 
 ## mysql
 
-- `mysql -u [uaername] -p` 连接 mysql
+- `mysql -u [username] -p` 连接 mysql
 - `quit` 退出 mysql
 - `mysqldump -u [username] -p [database] > [filename].sql --default-character-set=utf8` 导出数据库
 - `source [filename].sql;` 导入 sql
-- `create user '[username]'@'[host]' identified by '[passwor]';` 创建 mysql 用户
+- `create user '[username]'@'[host]' identified by '[password]';` 创建 mysql 用户
 - `GRANT ALL PRIVILEGES ON [database].[table] TO '[username]'@'[host]' IDENTIFIED BY '[password]' WITH GRANT OPTION;` 授权
 - `flush privileges;` 刷新权限
+- `desc [table];` 查看表结构
+- `alter table [table] add [field] varchar(255) default '0';` 新增字段
 
 > 注意：【创建 mysql 用户】和【授权】操作后需执行【刷新权限】命令才能生效。
 
