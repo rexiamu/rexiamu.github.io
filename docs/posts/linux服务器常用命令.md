@@ -1,6 +1,6 @@
 ---
 title: linux服务器常用命令
-date: 2021-07-23 19:34:05
+date: 2021-08-19 19:34:05
 permalink: /pages/ad6c88/
 categories:
   - linux

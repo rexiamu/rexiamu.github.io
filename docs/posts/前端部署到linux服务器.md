@@ -1,6 +1,6 @@
 ---
 title: 前端部署到linux服务器
-date: 2021-07-13 20:43:15
+date: 2021-07-23 20:43:15
 permalink: /pages/df4ab5/
 categories:
   - 项目部署

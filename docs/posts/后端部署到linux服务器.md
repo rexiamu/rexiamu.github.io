@@ -1,6 +1,6 @@
 ---
 title: 后端部署到linux服务器
-date: 2021-07-13 19:50:08
+date: 2021-07-23 19:50:08
 permalink: /pages/4a1bea/
 categories:
   - 项目部署
