@@ -269,4 +269,4 @@ html 导出为 word
 
 ## 效果
 
-<https://rexiamu.gitee.io/demo/html-to-word/index.html>
+<https://rexiamu.github.io/demo/html-to-word/index.html>
