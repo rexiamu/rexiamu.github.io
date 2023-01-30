@@ -260,3 +260,13 @@ html 导出为 word
 
 </html>
 ```
+
+## 注意事项
+
+- 经测试，内容区域的宽度控制在 `550px` 刚好撑满 word 文档
+- 要想使样式在导出后生效，需要编写行内样式或者在函数 `html2word` 编写
+- 网页上显示 echarts, 隐藏生成的图片
+
+## 效果
+
+<https://rexiamu.gitee.io/demo/html-to-word/index.html>

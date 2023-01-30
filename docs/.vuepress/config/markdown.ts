@@ -3,7 +3,7 @@
 import { MarkdownConfig } from "vuepress/config";
 
 export default <MarkdownConfig>{
-  lineNumbers: true,
+  lineNumbers: false,
   plugins: [
     "markdown-it-sub",
     "markdown-it-sup",
